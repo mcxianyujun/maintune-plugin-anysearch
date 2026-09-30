@@ -2,7 +2,7 @@
 
 Maintune Plugin API v2 的独立官方网页搜索插件。它将 AnySearch 搜索注册为 `official.anysearch/search` Agent Tool，让 `code_worker` 在得到管理员明确授权后查询公开网页，并返回可引用的 URL、标题和摘要。插件仅导入公开的 `maintune-plugin-sdk`；Maintune Core 不包含 AnySearch 专用逻辑。
 
-**状态：v0.1.0 本地候选包，尚未创建公开 Release。** 本插件需要 Maintune v0.1.0-preview.3 或更新版本的 Plugin API v2，以及 Python 3.12+ 的隔离插件运行环境。当前只有 `code_worker` 可以调用插件 Tool。
+**版本：v0.1.0。** 本插件需要 Maintune v0.1.0-preview.3 或更新版本的 Plugin API v2，以及 Python 3.12+ 的隔离插件运行环境。当前只有 `code_worker` 可以调用插件 Tool。
 
 ## 安装
 
@@ -46,7 +46,7 @@ python build_mtp.py
 
 This independent official Plugin API v2 package registers `official.anysearch/search` as a web-search Agent Tool. Once an administrator explicitly enables it for `code_worker`, the Tool returns citable URLs, titles and snippets from AnySearch. The plugin imports only the public `maintune-plugin-sdk`; Maintune Core contains no AnySearch-specific implementation.
 
-**Status: local v0.1.0 candidate; no public Release yet.** It requires Maintune v0.1.0-preview.3 or newer with Plugin API v2 and an isolated Python 3.12+ plugin runtime. Only `code_worker` can invoke plugin Tools in the current runtime.
+**Version: v0.1.0.** It requires Maintune v0.1.0-preview.3 or newer with Plugin API v2 and an isolated Python 3.12+ plugin runtime. Only `code_worker` can invoke plugin Tools in the current runtime.
 
 ## Install
 
