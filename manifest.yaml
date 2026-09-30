@@ -1,0 +1,50 @@
+{
+  "id": "official.anysearch",
+  "name": "AnySearch Web Search",
+  "version": "0.1.0",
+  "plugin_api": 2,
+  "publisher": "mcxianyujun",
+  "license": "AGPL-3.0-only",
+  "description": "Official AnySearch web search Agent Tool for Maintune Plugin API v2.",
+  "maintune": { "min_version": "0.1.0" },
+  "runtime": { "default": "isolated", "supported": ["isolated"] },
+  "entrypoint": { "python": "anysearch_plugin" },
+  "python": { "dependencies": "requirements.txt" },
+  "config_schema": {
+    "type": "object",
+    "properties": {
+      "api_key": {
+        "type": "string",
+        "title": "AnySearch API key",
+        "description": "Used only for requests to the configured AnySearch endpoint.",
+        "minLength": 1,
+        "secret": true
+      },
+      "base_url": {
+        "type": "string",
+        "title": "API base URL",
+        "default": "https://api.anysearch.com"
+      },
+      "max_results": {
+        "type": "integer",
+        "title": "Maximum results per search",
+        "minimum": 1,
+        "maximum": 10,
+        "default": 10
+      },
+      "zone": {
+        "type": "string",
+        "title": "Search region",
+        "enum": ["cn", "intl"],
+        "default": "intl"
+      },
+      "language": {
+        "type": "string",
+        "title": "Result language",
+        "default": ""
+      }
+    },
+    "required": ["api_key"],
+    "additionalProperties": false
+  }
+}
